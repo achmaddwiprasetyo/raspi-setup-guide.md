@@ -56,8 +56,8 @@ sudo apt install php -y
 ```
 You can remove the index.html and create a PHP script to test the installation:
 ```bash
-pi@raspberrypi:/var/www/html $ sudo rm index.html
-pi@raspberrypi:/var/www/html $ sudo nano index.php
+sudo rm index.html
+sudo nano index.php
 ```
 In your index.php file add the following code to echo the “hello world” message:
 ```bash
@@ -68,13 +68,13 @@ To save your file: press Ctrl+X, followed by y, and press Enter to exit.
 
 Finally, restart Apache2:
 ```bash
-pi@raspberrypi:/var/www/html $ sudo service apache2 restart
+sudo service apache2 restart
 ```
 To test if Apache2 is serving .php files, open the Raspberry Pi IP address and it should display the **“hello world”** message from the index.php script created earlier.</br>
 ![index](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/4-Raspberry-Pi-test-PHP-File-Hello-World-message-web-browser.png?w=557&quality=100&strip=all&ssl=1)</br>
 If everything is working, you can remove index.php file from the /var/www/html directory:
 ```bash
-pi@raspberrypi:/var/www/html $ sudo rm index.php
+sudo rm index.php
 ```
 
 ### 4. Install MySQL (MariaDB Server) on Raspberry Pi
@@ -88,3 +88,75 @@ After installing MySQL (MariaDB Server), it’s recommend to run this command to
 ```bash
 sudo mysql_secure_installation
 ```
+This should appear in your Terminal window:
+![mysql](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/5-Raspberry-Pi-MySQL-MariaDB-Install-Secure-Installation.png?w=773&quality=100&strip=all&ssl=1)</br>
+- You will be asked Enter **current password for root** (type a secure password): press Enter
+- Type in **Y** and press **Enter** to Set root password
+- Type in a password at the New password: prompt, and press Enter. Important: remember this root password, as you will need it later
+- Type in **Y** to Remove anonymous users
+- Type in **Y** to Disallow root login remotely
+- Type in **Y** to Remove test database and access to it
+- Type in **Y** to Reload privilege tables now
+When the installation is completed, you’ll see the message: “Thanks for using MariaDB!”.
+![mdb](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/6-Raspberry-Pi-MySQL-Database-MariaDB-Final-Secure-Installation.png?w=773&quality=100&strip=all&ssl=1)</br>
+If you experience any error login into phpMyAdmin, you might need to create a new user to login. Those commands will create a new user with name (admin) and password (your_password).
+```bash
+pi@raspberrypi:/var/www/html $ sudo mysql --user=root --password
+> create user admin@localhost identified by 'your_password';
+> grant all privileges on *.* to admin@localhost;
+> FLUSH PRIVILEGES;
+> exit;
+```
+
+### 5. Install phpMyAdmin on Raspberry Pi
+phpMyAdmin is a free software tool written in PHP, intended to handle the administration of MySQL using a web interface.
+
+To install phpMyAdmin on a Raspberry Pi, type the following command into the terminal:
+```bash
+sudo apt install phpmyadmin -y
+```
+PHPMyAdmin installation program will ask you few questions. We’ll use the **dbconfig-common**.
+- Select **Apache2** when prompted and press the **Enter*** key
+- Configuring **phpmyadmin**? **OK**
+- Configure database for phpmyadmin with **dbconfig-common**? **Yes**
+- Type your **password** and press **OK**
+![php](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/7-Raspberry-Pi-install-phpMyAdmin.png?w=773&quality=100&strip=all&ssl=1)</br>
+Enable the PHP MySQLi extension and restart Apache2 for changes to take effect:
+```bash
+sudo phpenmod mysqli
+sudo service apache2 restart
+```
+When you go to your RPi IP address followed by **/phpmyadmin** (in my case ``http://192.168.1.86/phpmyadmin``), you’ll probably see the “Not Found” error page in your browser:</br>
+![php2](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/9-Failed-to-open-phpMyAdmin-Raspberry-Pi.png?w=927&quality=100&strip=all&ssl=1)</br>
+If that’s the case, you’ll have to move the *phpmyadmin* folder to ``/var/www/html``, run the next command:
+```bash
+sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+```
+Now, if you list the files, it should return the **phpmyadmin** folder:
+```bash
+ls
+phpmyadmin
+```
+![php3](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/8-Raspberry-Pi-move-phpMyAdmin.png?w=773&quality=100&strip=all&ssl=1)</br>
+Reload your web page (http://192.168.1.86/phpmyadmin), your should see the login page for phpMyAdmin web interface:</br>
+![php4](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/10-Raspberry-Pi-Open-phpMyAdmin-Login-Page.png?w=753&quality=100&strip=all&ssl=1)</br>
+Enter your defined username (it should be **Username = root**) and the password you defined during the installation.
+
+Press the **Go** button to login. A new page loads:</br>
+![php4](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/11-Raspberry-Pi-Open-phpMyAdmin-Logged-in-Page.png?resize=1024%2C615&quality=100&strip=all&ssl=1)</br>
+That’s it! Your Raspberry Pi board is prepared with a LAMP server: Apache2, MySQL, PHP. We’ve also decided to include phpMyAdmin in this installation for an easier database management through a web interface.
+
+### 6. Optional Step (but recommended)
+To manage your web pages, you should change the permissions for your ``/var/www/html/`` folder. To do this, run the following commands:
+```bash
+pi@raspberrypi:~ $ ls -lh /var/www/
+pi@raspberrypi:~ $ sudo chown -R pi:www-data /var/www/html/
+pi@raspberrypi:~ $ sudo chmod -R 770 /var/www/html/
+pi@raspberrypi:~ $ ls -lh /var/www/
+```
+After running these commands, you’ll see something as follows:</br>
+![ops](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/12-Raspberry-Pi-change-var-www-html-folder.png?w=773&quality=100&strip=all&ssl=1)</br>
+
+
+
+## 4. Instal Node-Red
