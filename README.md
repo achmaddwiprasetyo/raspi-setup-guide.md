@@ -71,8 +71,5 @@ When you see the "Write Successful" popup, your image has been completely writte
 ![finish](https://www.raspberrypi.com/documentation/computers/images/imager/finished.png?hash=ba5031e958427e07a6c3a727d3b30021)
 Next, proceed to the first boot configuration instructions to get your Raspberry Pi up and running.
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=CQtliTJ41ZE
-" target="_blank"><img src="http://img.youtube.com/vi/CQtliTJ41ZE/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
-[![YouTube](http://img.youtube.com/vi/CQtliTJ41ZE/0.jpg)](https://www.youtube.com/watch?v=CQtliTJ41ZE)
+[![youtube](http://img.youtube.com/vi/CQtliTJ41ZE/0.jpg)](http://www.youtube.com/watch?v=CQtliTJ41ZE)
 
