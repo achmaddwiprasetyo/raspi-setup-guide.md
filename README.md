@@ -46,3 +46,20 @@ pi@raspberrypi:/var/www/html $ hostname -I
 
 In my case, the Raspberry Pi IP address is 192.168.1.86. If you open your RPi IP address in any browser in your local network, a similar web page should load **(http://192.168.1.86)**:
 ![apache3](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/2-Raspberry-Pi-Apache2-Installed.png?w=840&quality=100&strip=all&ssl=1)
+
+### 3. Install PHP on Raspberry Pi
+PHP is a server side scripting language. PHP (Hypertext Preprocessor) is used to develop dynamic web applications. A PHP file contains <?php … ?> tags and ends with the extension “.php“.
+
+To install PHP on Raspberry Pi, run:
+```bash
+sudo apt install php -y
+```
+You can remove the index.html and create a PHP script to test the installation:
+```bash
+pi@raspberrypi:/var/www/html $ sudo rm index.html
+pi@raspberrypi:/var/www/html $ sudo nano index.php
+```
+In your index.php file add the following code to echo the “hello world” message:
+```bash
+<?php echo "hello world"; ?>
+```
