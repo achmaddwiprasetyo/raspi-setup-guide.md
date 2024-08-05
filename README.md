@@ -3,7 +3,8 @@
 ## Install using Imager
 You can install Imager in the following ways:
 - Download the latest version from [raspberrypi.com/software](https://www.raspberrypi.org/downloads/raspbian/)  and run the installer.
-- Download according to the OS system you are using.</br>
+- Download according to the OS system you are using.
+
 Once you’ve installed Imager, launch the application by clicking the Raspberry Pi Imager icon
 ![lauchApp](https://www.raspberrypi.com/documentation/computers/images/imager/welcome.png?hash=a351c2ba01f30809c2921de09be67683)
 
