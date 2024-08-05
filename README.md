@@ -31,3 +31,17 @@ To install Apache2 on your Raspberry Pi, run the next command:
 sudo apt install apache2 -y
 ```
 ![apache](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/0-Raspberry-Pi-Install-Apache2.png?w=749&quality=100&strip=all&ssl=1)
+
+That’s it! Apache is now installed. To test your installation, change to the /var/www/html directory and list the files:
+```bash
+pi@raspberrypi:~ $ cd /var/www/html
+pi@raspberrypi:/var/www/html $ ls -al
+index.html
+```
+You should have an index.html file in that folder. To open that page in your browser, you need to know the Raspberry Pi IP address. Use:
+```bash
+pi@raspberrypi:/var/www/html $ hostname -I
+```
+![apache2](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/1-Raspberry-Pi-change-directory-RPi-IP-Address.png?w=501&quality=100&strip=all&ssl=1)
+In my case, the Raspberry Pi IP address is 192.168.1.86. If you open your RPi IP address in any browser in your local network, a similar web page should load **(http://192.168.1.86)**:
+![apache3](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/2-Raspberry-Pi-Apache2-Installed.png?w=840&quality=100&strip=all&ssl=1)
