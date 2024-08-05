@@ -80,8 +80,10 @@ First, unplug your Raspberry Pi’s power supply to ensure that the Raspberry Pi
 ![plugsd](https://www.raspberrypi.com/documentation/computers/images/peripherals/sd-card.png?hash=d0b4ea20b41681cee6ce87eb5df2b279)
 
 Then, plug in any other peripherals, such as your mouse, keyboard, and monitor.
+
 ![plugcom](https://www.raspberrypi.com/documentation/computers/images/peripherals/cable-all.png?hash=99131f604cad98dc8eddc7daa0b7d20e)
 Finally, connect the power supply to your Raspberry Pi. You should see the status LED light up when your Pi powers on. If your Pi is connected to a display, you should see the boot screen within minutes.
+
 
 
 
