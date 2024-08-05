@@ -12,9 +12,9 @@ You can install :
 ## 2. Connecting via SSH
 1. Open CMD
 2. Enter the connection command. This is SSH + your username @ the IP address or host name. (SSH <username>@<IP or Host Name>)
-   ![ssh](https://jarrodstech.net/wp-content/uploads/2020/04/login.png)
+![ssh](https://jarrodstech.net/wp-content/uploads/2020/04/login.png)
 3. Enter your password and you will be connected, easy as that. No additional software needed. You can now enter any commands, as if you are sitting at your PI.
-   ![ssh](https://jarrodstech.net/wp-content/uploads/2020/04/loggedin.png)
+![ssh](https://jarrodstech.net/wp-content/uploads/2020/04/loggedin.png)
 
 
 ## 3. Install LAMP using Raspberry PI
