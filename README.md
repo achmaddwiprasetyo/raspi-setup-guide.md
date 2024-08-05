@@ -43,8 +43,11 @@ The **Services** tab includes settings to help you connect to your Raspberry Pi 
 If you plan to use your Raspberry Pi remotely over your network, check the box next to **Enable SSH**. You should enable this option if you plan to run a headless Raspberry Pi.
 - Choose the **password authentication** option to SSH into your Raspberry Pi over the network using the username and password you provided in the general tab of OS customisation.
 - Choose **Allow public-key authentication** only to preconfigure your Raspberry Pi for passwordless public-key SSH authentication using a private key from the computer you’re currently using. If already have an RSA key in your SSH configuration, Imager uses that public key. If you don’t, you can click **Run SSH-keygen** to generate a public/private key pair. Imager will use the newly-generated public key.
+- 
 ![ssh](https://www.raspberrypi.com/documentation/computers/images/imager/os-customisation-services.png?hash=bbc8c0ff2f1eb7207d43180d7694c399)
+
 OS customisation also includes an **Options** menu that allows you to configure the behaviour of Imager during a write. These options allow you to play a noise when Imager finishes verifying an image, to automatically unmount storage media after verification, and to disable telemetry.
+
 ![option](https://www.raspberrypi.com/documentation/computers/images/imager/os-customisation-options.png?hash=eda44365c03e4184f09832f46516a41b)
 
 ## Write
@@ -53,10 +56,14 @@ When you’ve finished entering OS customisation settings, click **Save** to sav
 Then, click **Yes** to apply OS customisation settings when you write the image to the storage device.
 
 Finally, respond **Yes** to the "Are you sure you want to continue?" popup to begin writing data to the storage device.
+
 ![final](https://www.raspberrypi.com/documentation/computers/images/imager/are-you-sure.png?hash=5dce4cfcd6622b97ce741b2c168f0a3d)
+
 If you see an admin prompt asking for permissions to read and write to your storage medium, grant Imager the permissions to proceed.
+
 ![process](https://www.raspberrypi.com/documentation/computers/images/imager/writing.png?hash=15fc8293a1c6b12fad0436e4d4aaf506)
 Grab a cup of coffee or go for a walk. This could take a few minutes.
+
 ![load](https://www.raspberrypi.com/documentation/computers/images/imager/stop-ask-verify.png?hash=78a0e9f7a1df18d5df3ebe92b073ed97)
 If you want to live especially dangerously, you can click cancel verify to skip the verification process.
 
