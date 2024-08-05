@@ -4,7 +4,7 @@
 You can install :
 1. [Install Raspberry PI and run the installer](https://github.com/achmaddwiprasetyo/raspi-install)
 2. [Connecting via SSH to the Raspberry Pi](https://github.com/achmaddwiprasetyo/raspi-setup-guide.md/blob/main/README.md#2-connecting-via-ssh)
-3. [Install LAMP Server using Raspberry PI](https://github.com/achmaddwiprasetyo/raspi-setup-guide.md/blob/main/README.md#3-install-lamp-using-raspberry-pi)
+3. [Install LAMP Server using Raspberry PI](https://github.com/achmaddwiprasetyo/raspi-setup-guide.md/blob/main/README.md#3-install-lamp-server-using-raspberry-pi)
 4. [Install Node-Red using Raspberry PI](https://github.com/achmaddwiprasetyo/raspi-setup-guide.md/blob/main/README.md#4-instal-node-red-using-raspberry-pi)
 5. [Install MQTT using Raspberry PI](https://github.com/achmaddwiprasetyo/raspi-setup-guide.md/blob/main/README.md#5-install-mqtt-using-raspberry-pi)
 
