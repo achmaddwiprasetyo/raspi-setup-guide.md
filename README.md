@@ -160,7 +160,7 @@ After running these commands, you’ll see something as follows:</br>
 
 
 ## 4. Instal Node-Red using Raspberry PI
-###Installing and Upgrading Node-RED
+### Installing and Upgrading Node-RED
 We provide a script to install Node.js, npm and Node-RED onto a Raspberry Pi. The script can also be used to upgrade an existing install when a new release is available.
 
 Running the following command will download and run the script. If you want to review the contents of the script first, you can view it on Github.
