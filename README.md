@@ -6,6 +6,13 @@ You can install Imager in the following ways:
 - Download according to the OS system you are using.
 Once you’ve installed Imager, launch the application by clicking the Raspberry Pi Imager icon
 ![lauchApp](https://www.raspberrypi.com/documentation/computers/images/imager/welcome.png?hash=a351c2ba01f30809c2921de09be67683)
+
+Click `Choose device` and select your Raspberry Pi model from the list.
+![lauchApp](https://www.raspberrypi.com/documentation/computers/images/imager/choose-model.png?hash=0543c40612882f917cfc565caa6dc92f)
+
+Next, click `Choose OS` and select an operating system to install. Imager always shows the recommended version of Raspberry Pi OS for your model at the top of the list.
+![lauchApp](https://www.raspberrypi.com/documentation/computers/images/imager/choose-os.png?hash=9d49bdaf867704b30f177d47e72dc9b8)
+
 ## Raspbian setup
 + Torrent `raspbian jessie lite` from https://www.raspberrypi.org/downloads/raspbian/
 + Burn the .dmg file on the SD card Using `raspberry pi filler` http://ivanx.com/raspberrypi/
