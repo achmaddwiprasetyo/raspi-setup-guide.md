@@ -63,17 +63,15 @@ In your index.php file add the following code to echo the “hello world” mess
 ```bash
 <?php echo "hello world"; ?>
 ```
-![hw](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/3-Raspberry-Pi-Create-PHP-Test-File-Hello-World.png?w=597&quality=100&strip=all&ssl=1)
+![hw](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/3-Raspberry-Pi-Create-PHP-Test-File-Hello-World.png?w=597&quality=100&strip=all&ssl=1)</br>
 To save your file: press Ctrl+X, followed by y, and press Enter to exit.
 
 Finally, restart Apache2:
 ```bash
 pi@raspberrypi:/var/www/html $ sudo service apache2 restart
 ```
-To test if Apache2 is serving .php files, open the Raspberry Pi IP address and it should display the **“hello world”** message from the index.php script created earlier.
-
-![index](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/4-Raspberry-Pi-test-PHP-File-Hello-World-message-web-browser.png?w=557&quality=100&strip=all&ssl=1)
-
+To test if Apache2 is serving .php files, open the Raspberry Pi IP address and it should display the **“hello world”** message from the index.php script created earlier.</br>
+![index](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/4-Raspberry-Pi-test-PHP-File-Hello-World-message-web-browser.png?w=557&quality=100&strip=all&ssl=1)</br>
 If everything is working, you can remove index.php file from the /var/www/html directory:
 ```bash
 pi@raspberrypi:/var/www/html $ sudo rm index.php
