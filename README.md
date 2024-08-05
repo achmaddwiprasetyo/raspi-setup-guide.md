@@ -17,6 +17,7 @@ You can install :
 3. Enter your password and you will be connected, easy as that. No additional software needed. You can now enter any commands, as if you are sitting at your PI.</br>
    ![ssh](https://jarrodstech.net/wp-content/uploads/2020/04/loggedin.png)
 
+More documentation can be found [here](https://jarrodstech.net/how-to-raspberry-pi-ssh-on-windows-10/).
 
 
 ## 3. Install LAMP Server using Raspberry PI
@@ -157,6 +158,8 @@ pi@raspberrypi:~ $ ls -lh /var/www/
 After running these commands, you’ll see something as follows:</br>
 ![ops](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/09/12-Raspberry-Pi-change-var-www-html-folder.png?w=773&quality=100&strip=all&ssl=1)</br>
 
+More documentation can be found [here](https://randomnerdtutorials.com/raspberry-pi-apache-mysql-php-lamp-server/).
+
 
 
 ## 4. Instal Node-Red using Raspberry PI
@@ -204,6 +207,8 @@ Once Node-RED is running you can access the editor in a browser.
 If you are using the browser on the Pi desktop, you can open the address: **http://localhost:1880**.
 
 When browsing from another machine you should use the hostname or IP-address of the Pi: ``http://<hostname>:1880``. You can find the IP address by running ``hostname -I`` on the Pi.
+
+More documentation can be found [here](https://nodered.org/docs/getting-started/raspberrypi).
 
 
 
