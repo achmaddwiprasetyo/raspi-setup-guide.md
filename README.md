@@ -2,8 +2,9 @@
 
 ### 1. Install using Raspberry PI
 You can install :
-1. [Install Raspberry PI](https://github.com/achmaddwiprasetyo/raspi-install)  and run the installer.
+1. [Install Raspberry PI and run the installer](https://github.com/achmaddwiprasetyo/raspi-install)
 2. [Connecting via SSH to the Raspberry Pi](https://github.com/achmaddwiprasetyo/raspi-setup-guide.md/blob/main/README.md#2-connecting-via-ssh)
+3. Install LAMP Server
 4. Install Node-Red
 5. Install MQTT
 
@@ -15,4 +16,9 @@ You can install :
    ![ssh](https://jarrodstech.net/wp-content/uploads/2020/04/loggedin.png)
    
 ### Install LAMP using Raspberry PI
+1. Before starting the installation procedure, open a Terminal window and run the following commands to update your Pi:
+   ```bash
+   pi@raspberrypi:~ $ sudo apt update && sudo apt upgrade -y
+   ```
+3. 
 
