@@ -1,5 +1,8 @@
 # Raspberry PI setup guide
 
+## Install using Imager
+You can install Imager in the following ways:
+- Download the latest version from 'raspberrypi.com/software'  and run the installer.
 ## Raspbian setup
 + Torrent `raspbian jessie lite` from https://www.raspberrypi.org/downloads/raspbian/
 + Burn the .dmg file on the SD card Using `raspberry pi filler` http://ivanx.com/raspberrypi/
