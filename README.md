@@ -13,6 +13,11 @@ Next, click `Choose OS` and select an operating system to install. Imager always
 ![os](https://www.raspberrypi.com/documentation/computers/images/imager/choose-os.png?hash=9d49bdaf867704b30f177d47e72dc9b8)
 Connect your preferred storage device to your computer. For example, plug a microSD card in using an external or built-in SD card reader. Then, click `Choose storage` and select your storage device.
 ![storage](https://www.raspberrypi.com/documentation/computers/images/imager/choose-storage.png?hash=05e6671a4cac0b1f3781448688f5d692)
+Next, click `Next`.
+![next](https://www.raspberrypi.com/documentation/computers/images/imager/os-customisation-prompt.png?hash=4df5658cd09684490db4c1f2352255a3)
+In a popup, Imager will ask you to apply OS customisation. We strongly recommend configuring your Raspberry Pi via the OS customisation settings. Click the `Edit Settings` button to open OS customisation.
+
+If you don’t configure your Raspberry Pi via OS customisation settings, Raspberry Pi OS will ask you for the same information at first boot during the configuration wizard. You can click the `No` button to skip OS customisation.
 
 ## Raspbian setup
 + Torrent `raspbian jessie lite` from https://www.raspberrypi.org/downloads/raspbian/
