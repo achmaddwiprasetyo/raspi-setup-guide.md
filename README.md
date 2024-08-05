@@ -12,12 +12,10 @@ You can install :
 
 ## 2. Connecting via SSH
 1. Open CMD
-2. Enter the connection command. This is SSH + your username @ the IP address or host name. (SSH <username>@<IP or Host Name>)
-   
-![ssh](https://jarrodstech.net/wp-content/uploads/2020/04/login.png)
-3. Enter your password and you will be connected, easy as that. No additional software needed. You can now enter any commands, as if you are sitting at your PI.
-
-![ssh](https://jarrodstech.net/wp-content/uploads/2020/04/loggedin.png)
+2. Enter the connection command. This is SSH + your username @ the IP address or host name. (SSH <username>@<IP or Host Name>)</br>
+   ![ssh](https://jarrodstech.net/wp-content/uploads/2020/04/login.png)</br>
+3. Enter your password and you will be connected, easy as that. No additional software needed. You can now enter any commands, as if you are sitting at your PI.</br>
+   ![ssh](https://jarrodstech.net/wp-content/uploads/2020/04/loggedin.png)
 
 
 
@@ -162,6 +160,51 @@ After running these commands, you’ll see something as follows:</br>
 
 
 ## 4. Instal Node-Red using Raspberry PI
+###Installing and Upgrading Node-RED
+We provide a script to install Node.js, npm and Node-RED onto a Raspberry Pi. The script can also be used to upgrade an existing install when a new release is available.
+
+Running the following command will download and run the script. If you want to review the contents of the script first, you can view it on Github.
+```bash
+bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+```
+
+### Running locally
+As with running Node-RED locally, you can use the node-red command to run Node-RED in a terminal. It can then be stopped by pressing Ctrl-C or by closing the terminal window.
+
+Due to the limited memory of the Raspberry Pi, you will need to start Node-RED with an additional argument to tell the underlying Node.js process to free up unused memory sooner than it would otherwise.
+
+To do this, you should use the alternative ``node-red-pi`` command and pass in the ``max-old-space-size`` argument.
+```bash
+node-red-pi --max-old-space-size=256
+```
+
+### Running as a service
+The install script for the Pi also sets it up to run as a service. This means it can run in the background and be enabled to automatically start on boot.
+
+The following commands are provided to work with the service:
+- ``node-red-start`` - this starts the Node-RED service and displays its log output. Pressing Ctrl-C or closing the window does not stop the service; it keeps running in the background
+- ``node-red-stop`` - this stops the Node-RED service
+- ``node-red-restart`` - this stops and restarts the Node-RED service
+- ``node-red-log`` - this displays the log output of the service
+You can also start the Node-RED service on the Raspberry Pi OS Desktop by selecting the Menu -> Programming -> Node-RED menu option.
+
+### Autostart on boot
+If you want Node-RED to run when the Pi is turned on, or re-booted, you can enable the service to autostart by running the command:
+```bash
+sudo systemctl enable nodered.service
+```
+To disable the service, run the command:
+```bash
+sudo systemctl disable nodered.service
+```
+
+### Opening the editor
+Once Node-RED is running you can access the editor in a browser.
+
+If you are using the browser on the Pi desktop, you can open the address: **http://localhost:1880**.
+
+When browsing from another machine you should use the hostname or IP-address of the Pi: ``http://<hostname>:1880``. You can find the IP address by running ``hostname -I`` on the Pi.
+
 
 
 ## 5. Install MQTT using Raspberry PI
