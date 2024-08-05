@@ -21,7 +21,7 @@ You can install :
 
 
 
-## 3. Install LAMP using Raspberry PI
+## 3. Install LAMP Server using Raspberry PI
 ### 1. Updating and Upgrading
 Before starting the installation procedure, open a Terminal window and run the following commands to update your Pi:
 ```bash
