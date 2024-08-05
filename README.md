@@ -73,5 +73,15 @@ When you see the "Write Successful" popup, your image has been completely writte
 ![finish](https://www.raspberrypi.com/documentation/computers/images/imager/finished.png?hash=ba5031e958427e07a6c3a727d3b30021)
 Next, proceed to the first boot configuration instructions to get your Raspberry Pi up and running.
 
+## Set up your Raspberry Pi
+After installing an operating system image, connect your storage device to your Raspberry Pi.
+
+First, unplug your Raspberry Pi’s power supply to ensure that the Raspberry Pi is powered down while you connect peripherals. If you installed the operating system on a microSD card, you can plug it into your Raspberry Pi’s card slot now. If you installed the operating system on any other storage device, you can connect it to your Raspberry Pi now.
+![plugsd](https://www.raspberrypi.com/documentation/computers/images/peripherals/sd-card.png?hash=d0b4ea20b41681cee6ce87eb5df2b279)
+
+Then, plug in any other peripherals, such as your mouse, keyboard, and monitor.
+![plugcom](https://www.raspberrypi.com/documentation/computers/images/peripherals/cable-all.png?hash=99131f604cad98dc8eddc7daa0b7d20e)
+Finally, connect the power supply to your Raspberry Pi. You should see the status LED light up when your Pi powers on. If your Pi is connected to a display, you should see the boot screen within minutes.
+
 
 
