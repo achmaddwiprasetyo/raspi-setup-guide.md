@@ -83,7 +83,6 @@ MySQL (often pronounced My S–Q–L) is a popular open source relational databa
 Install the MySQL Server (MariaDB Server) and PHP-MySQL packages by entering the following command:
 ```bash
 sudo apt install mariadb-server php-mysql -y
-sudo apt install mariadb-server php-mysql -y
 ```
 After installing MySQL (MariaDB Server), it’s recommend to run this command to secure your MySQL installation:
 ```bash
